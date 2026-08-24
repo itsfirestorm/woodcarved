@@ -1,0 +1,13 @@
+{
+  "itemGroup.woodcarved": "Example Mod Tab",
+  "block.woodcarved.example_block": "Example Block",
+  "item.woodcarved.example_item": "Example Item",
+
+  "woodcarved.configuration.title": "woodcarved Configs",
+  "woodcarved.configuration.section.woodcarved.common.toml": "woodcarved Configs",
+  "woodcarved.configuration.section.woodcarved.common.toml.title": "woodcarved Configs",
+  "woodcarved.configuration.items": "Item List",
+  "woodcarved.configuration.logDirtBlock": "Log Dirt Block",
+  "woodcarved.configuration.magicNumberIntroduction": "Magic Number Text",
+  "woodcarved.configuration.magicNumber": "Magic Number"
+}
