@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "minecraft:oak_logs"
+  },
+  "result": {
+    "id": "minecraft:oak_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:azalea_post"
+  },
+  "result": {
+    "id": "quark:stripped_azalea_post",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:aspen_sign"
+  },
+  "result": {
+    "id": "supplementaries:natures_spirit/way_sign_aspen",
+    "count": 2
+  }
+}

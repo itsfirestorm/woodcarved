@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:blossom_planks"
+  },
+  "result": {
+    "id": "quark:blossom_fence",
+    "count": 1
+  }
+}

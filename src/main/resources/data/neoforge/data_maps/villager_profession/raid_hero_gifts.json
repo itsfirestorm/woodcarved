@@ -1,0 +1,7 @@
+{
+  "values": {
+    "woodcarved:carpenter": {
+      "loot_table": "woodcarved:gameplay/hero_of_the_village/carpenter_gift"
+    }
+  }
+}

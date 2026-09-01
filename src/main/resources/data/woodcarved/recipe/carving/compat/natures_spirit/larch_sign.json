@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:larch_planks"
+  },
+  "result": {
+    "id": "natures_spirit:larch_sign",
+    "count": 1
+  }
+}

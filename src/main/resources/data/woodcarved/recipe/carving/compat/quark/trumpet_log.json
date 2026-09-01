@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:blossom_wood"
+  },
+  "result": {
+    "id": "quark:blossom_log",
+    "count": 1
+  }
+}

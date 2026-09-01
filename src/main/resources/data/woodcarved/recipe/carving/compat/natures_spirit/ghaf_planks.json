@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "natures_spirit:ghaf_logs"
+  },
+  "result": {
+    "id": "natures_spirit:ghaf_planks",
+    "count": 4
+  }
+}

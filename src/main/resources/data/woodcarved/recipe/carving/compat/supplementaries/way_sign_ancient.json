@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:ancient_sign"
+  },
+  "result": {
+    "id": "supplementaries:quark/way_sign_ancient",
+    "count": 2
+  }
+}

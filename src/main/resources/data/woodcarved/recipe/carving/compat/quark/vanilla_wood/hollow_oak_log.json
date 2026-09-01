@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:oak_log"
+  },
+  "result": {
+    "id": "quark:hollow_oak_log",
+    "count": 1
+  }
+}

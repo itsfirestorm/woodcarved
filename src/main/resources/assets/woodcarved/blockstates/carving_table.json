@@ -1,0 +1,8 @@
+{
+  "variants": {
+    "facing=north": { "model": "woodcarved:block/carving_table" },
+    "facing=south": { "model": "woodcarved:block/carving_table", "y": 180 },
+    "facing=west": { "model": "woodcarved:block/carving_table", "y": 270 },
+    "facing=east": { "model": "woodcarved:block/carving_table", "y": 90 }
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:wisteria_wood"
+  },
+  "result": {
+    "id": "natures_spirit:wisteria_log",
+    "count": 1
+  }
+}

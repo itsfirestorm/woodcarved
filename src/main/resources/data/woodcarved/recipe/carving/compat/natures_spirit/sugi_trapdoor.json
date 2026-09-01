@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:sugi_planks"
+  },
+  "result": {
+    "id": "natures_spirit:sugi_trapdoor",
+    "count": 2
+  }
+}

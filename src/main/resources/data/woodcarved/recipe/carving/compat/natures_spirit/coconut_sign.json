@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:coconut_planks"
+  },
+  "result": {
+    "id": "natures_spirit:coconut_sign",
+    "count": 1
+  }
+}

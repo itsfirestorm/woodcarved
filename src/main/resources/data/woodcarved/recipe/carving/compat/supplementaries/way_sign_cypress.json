@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:cypress_sign"
+  },
+  "result": {
+    "id": "supplementaries:natures_spirit/way_sign_cypress",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:bamboo_planks"
+  },
+  "result": {
+    "id": "minecraft:bamboo_door",
+    "count": 1
+  }
+}

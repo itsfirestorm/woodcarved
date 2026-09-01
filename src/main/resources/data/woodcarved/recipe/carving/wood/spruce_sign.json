@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:spruce_planks"
+  },
+  "result": {
+    "id": "minecraft:spruce_sign",
+    "count": 1
+  }
+}

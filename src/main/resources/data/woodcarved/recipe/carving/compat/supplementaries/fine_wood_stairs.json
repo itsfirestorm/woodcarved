@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "supplementaries:fine_wood"
+  },
+  "result": {
+    "id": "supplementaries:fine_wood_stairs",
+    "count": 1
+  }
+}

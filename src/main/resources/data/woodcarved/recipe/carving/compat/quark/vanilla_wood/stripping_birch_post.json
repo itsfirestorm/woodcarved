@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:birch_post"
+  },
+  "result": {
+    "id": "quark:stripped_birch_post",
+    "count": 1
+  }
+}

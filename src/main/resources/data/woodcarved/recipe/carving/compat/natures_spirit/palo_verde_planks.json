@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "natures_spirit:palo_verde_logs"
+  },
+  "result": {
+    "id": "natures_spirit:palo_verde_planks",
+    "count": 4
+  }
+}

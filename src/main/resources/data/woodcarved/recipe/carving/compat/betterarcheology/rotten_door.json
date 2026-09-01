@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "betterarcheology:rotten_planks"
+  },
+  "result": {
+    "id": "betterarcheology:rotten_door",
+    "count": 1
+  }
+}

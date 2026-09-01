@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:warped_sign"
+  },
+  "result": {
+    "id": "supplementaries:way_sign_warped",
+    "count": 2
+  }
+}

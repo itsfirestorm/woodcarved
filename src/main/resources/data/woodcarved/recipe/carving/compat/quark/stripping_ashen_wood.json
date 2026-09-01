@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:ancient_wood"
+  },
+  "result": {
+    "id": "quark:stripped_ancient_wood",
+    "count": 1
+  }
+}

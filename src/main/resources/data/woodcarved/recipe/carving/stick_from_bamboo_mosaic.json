@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:bamboo_mosaic"
+  },
+  "result": {
+    "id": "minecraft:stick",
+    "count": 4
+  }
+}

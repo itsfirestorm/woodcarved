@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:bamboo_mosaic_slab"
+  },
+  "result": {
+    "id": "quark:bamboo_mosaic_vertical_slab",
+    "count": 1
+  }
+}

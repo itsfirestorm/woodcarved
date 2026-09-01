@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:vertical_mangrove_planks"
+  },
+  "result": {
+    "id": "minecraft:mangrove_button",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:mangrove_wood"
+  },
+  "result": {
+    "id": "quark:mangrove_post",
+    "count": 4
+  }
+}

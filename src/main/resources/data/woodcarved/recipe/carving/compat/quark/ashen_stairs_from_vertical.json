@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:vertical_ancient_planks"
+  },
+  "result": {
+    "id": "quark:ancient_planks_stairs",
+    "count": 1
+  }
+}

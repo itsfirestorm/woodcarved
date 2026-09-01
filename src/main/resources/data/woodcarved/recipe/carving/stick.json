@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "minecraft:planks"
+  },
+  "result": {
+    "id": "minecraft:stick",
+    "count": 4
+  }
+}

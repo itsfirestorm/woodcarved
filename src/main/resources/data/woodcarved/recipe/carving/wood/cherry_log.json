@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:cherry_wood"
+  },
+  "result": {
+    "id": "minecraft:cherry_log",
+    "count": 1
+  }
+}

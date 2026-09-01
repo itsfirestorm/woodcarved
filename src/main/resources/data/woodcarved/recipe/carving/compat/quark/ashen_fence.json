@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:ancient_planks"
+  },
+  "result": {
+    "id": "quark:ancient_fence",
+    "count": 1
+  }
+}

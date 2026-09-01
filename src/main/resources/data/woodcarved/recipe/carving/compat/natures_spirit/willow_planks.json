@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "natures_spirit:willow_logs"
+  },
+  "result": {
+    "id": "natures_spirit:willow_planks",
+    "count": 4
+  }
+}

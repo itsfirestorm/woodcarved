@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:jungle_wood"
+  },
+  "result": {
+    "id": "quark:jungle_post",
+    "count": 4
+  }
+}

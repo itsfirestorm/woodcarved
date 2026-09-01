@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:fir_sign"
+  },
+  "result": {
+    "id": "supplementaries:natures_spirit/way_sign_fir",
+    "count": 2
+  }
+}

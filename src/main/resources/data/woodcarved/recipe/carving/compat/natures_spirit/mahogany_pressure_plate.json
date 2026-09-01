@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:mahogany_planks"
+  },
+  "result": {
+    "id": "natures_spirit:mahogany_pressure_plate",
+    "count": 2
+  }
+}

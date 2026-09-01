@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "aether:skyroot_logs"
+  },
+  "result": {
+    "id": "aether:skyroot_planks",
+    "count": 4
+  }
+}

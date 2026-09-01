@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:azalea_planks"
+  },
+  "result": {
+    "id": "quark:azalea_sign",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:azalea_planks_vertical_slab"
+  },
+  "result": {
+    "id": "quark:azalea_planks_slab",
+    "count": 1
+  }
+}

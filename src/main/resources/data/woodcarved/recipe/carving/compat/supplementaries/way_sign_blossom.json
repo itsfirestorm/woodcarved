@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:blosson_sign"
+  },
+  "result": {
+    "id": "supplementaries:quark/way_sign_blosson",
+    "count": 2
+  }
+}

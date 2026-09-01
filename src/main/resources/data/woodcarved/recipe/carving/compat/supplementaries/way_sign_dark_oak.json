@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:dark_oak_sign"
+  },
+  "result": {
+    "id": "supplementaries:way_sign_dark_oak",
+    "count": 2
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:stripped_saxaul_wood"
+  },
+  "result": {
+    "id": "natures_spirit:stripped_saxaul_log",
+    "count": 1
+  }
+}

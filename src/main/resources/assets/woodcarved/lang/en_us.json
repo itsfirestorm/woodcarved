@@ -1,13 +1,8 @@
 {
-  "itemGroup.woodcarved": "Example Mod Tab",
-  "block.woodcarved.example_block": "Example Block",
-  "item.woodcarved.example_item": "Example Item",
+  "item.woodcarved.carving_blade": "Carving Blade",
+  "block.woodcarved.carving_table": "Carving Table",
 
-  "woodcarved.configuration.title": "woodcarved Configs",
-  "woodcarved.configuration.section.woodcarved.common.toml": "woodcarved Configs",
-  "woodcarved.configuration.section.woodcarved.common.toml.title": "woodcarved Configs",
-  "woodcarved.configuration.items": "Item List",
-  "woodcarved.configuration.logDirtBlock": "Log Dirt Block",
-  "woodcarved.configuration.magicNumberIntroduction": "Magic Number Text",
-  "woodcarved.configuration.magicNumber": "Magic Number"
+  "entity.minecraft.villager.woodcarved.carpenter": "Carpenter",
+
+  "menu.woodcarved.carving_blade": "Carving Blade"
 }

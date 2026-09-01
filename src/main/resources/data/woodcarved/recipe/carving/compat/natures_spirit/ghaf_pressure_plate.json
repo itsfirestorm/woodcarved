@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:ghaf_planks"
+  },
+  "result": {
+    "id": "natures_spirit:ghaf_pressure_plate",
+    "count": 2
+  }
+}

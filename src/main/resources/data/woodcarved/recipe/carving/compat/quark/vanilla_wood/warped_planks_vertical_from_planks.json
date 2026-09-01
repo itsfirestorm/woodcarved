@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:warped_planks"
+  },
+  "result": {
+    "id": "quark:vertical_warped_planks",
+    "count": 1
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "natures_spirit:saxaul_planks"
+  },
+  "result": {
+    "id": "natures_spirit:saxaul_trapdoor",
+    "count": 2
+  }
+}

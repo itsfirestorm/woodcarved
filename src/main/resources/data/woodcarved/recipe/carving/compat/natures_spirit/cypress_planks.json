@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "natures_spirit:cypress_logs"
+  },
+  "result": {
+    "id": "natures_spirit:cypress_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "minecraft:jungle_wood"
+  },
+  "result": {
+    "id": "minecraft:jungle_log",
+    "count": 1
+  }
+}

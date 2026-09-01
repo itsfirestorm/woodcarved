@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:acacia_post"
+  },
+  "result": {
+    "id": "quark:stripped_acacia_post",
+    "count": 1
+  }
+}

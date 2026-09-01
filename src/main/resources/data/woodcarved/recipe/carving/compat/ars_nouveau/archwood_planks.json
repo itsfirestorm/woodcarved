@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "c:logs/archwood"
+  },
+  "result": {
+    "id": "ars_nouveau:archwood_planks",
+    "count": 4
+  }
+}
