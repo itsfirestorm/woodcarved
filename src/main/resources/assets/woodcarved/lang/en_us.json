@@ -4,5 +4,11 @@
 
   "entity.minecraft.villager.woodcarved.carpenter": "Carpenter",
 
-  "menu.woodcarved.carving_blade": "Carving Blade"
+  "menu.woodcarved.carving_blade": "Carving Blade",
+
+  "message.woodcarved.cannot_apply": "Cannot carve this block into the selected shape.",
+  "message.woodcarved.selection_cleared": "Selection cleared.",
+
+  "tooltip.woodcarved.carving_blade.origin": "Applies to: %s",
+  "tooltip.woodcarved.carving_blade.result": "Carves into: %s"
 }

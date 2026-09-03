@@ -1,6 +1,7 @@
 package com.itsfirestorm.woodcarved;
 
 import com.itsfirestorm.woodcarved.crafting.ModRecipeSerializers;
+import com.itsfirestorm.woodcarved.registries.ModDataComponents;
 import com.itsfirestorm.woodcarved.registries.ModMenuTypes;
 import com.itsfirestorm.woodcarved.registries.ModRecipeTypes;
 import com.itsfirestorm.woodcarved.registries.ModVillagers;
@@ -71,6 +72,9 @@ public class woodcarved {
 
         // Register villagers & poi
         ModVillagers.register(modEventBus);
+
+        // Register data components
+        ModDataComponents.register(modEventBus);
     }
 
     private void addCreative(BuildCreativeModeTabContentsEvent event) {

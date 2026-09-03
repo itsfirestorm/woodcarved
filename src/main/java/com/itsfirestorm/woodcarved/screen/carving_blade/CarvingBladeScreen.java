@@ -24,63 +24,37 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
             );
 
     // -- Panel --
-    private static final int PANEL_TEX_W = 168;
-    private static final int PANEL_TEX_H = 129;
+    private static final int PANEL_TEX_W = 171;
+    private static final int PANEL_TEX_H = 126;
 
     // -- Grid --
     // -- Result area grid definitions --
-    private static final int SLOT_SIZE = 42;
+    private static final int SLOT_SIZE = 32;
     private static final int RECIPE_AREA_X = 14;
     private static final int RECIPE_AREA_Y = 15;
-    private static final int COLUMNS = 3;
-    private static final int ROWS = 2;
+    private static final int COLUMNS = 4;
+    private static final int ROWS = 3;
     private static final int VISIBLE = COLUMNS * ROWS;
 
     // -- Grid buttons --
-    private static final int SLOT_BG_X = 0;
-    private static final int SLOT_BG_NORMAL_Y = 130;
-    private static final int SLOT_BG_SELECTED_Y = 172;
-    private static final int SLOT_BG_HOVER_Y = 214;
+    private static final int SLOT_BG_Y = 126;
+    private static final int SLOT_BG_NORMAL_X = 0;
+    private static final int SLOT_BG_SELECTED_X = 32;
+    private static final int SLOT_BG_HOVER_X = 64;
 
     // Vanilla items render at 16x16, center that
-    private static final float ITEM_SCALE = 2.0F;
+    private static final float ITEM_SCALE = 1.2F;
     private static final int ITEM_RENDER_SIZE = 16;
     private static final int ITEM_INSET = (SLOT_SIZE - (int) (ITEM_RENDER_SIZE * ITEM_SCALE)) / 2;
 
-    // -- Confirm / Cancel buttons --
-    // -- Button GUI definitions --
-    private static final int BTN_SIZE_W = 22;
-    private static final int BTN_SIZE_H = 22;
-    private static final int BTN_BG_Y = 130;
-    private static final int BTN_ENABLED_X = 42;
-    private static final int BTN_PRESSED_X = 65;
-    private static final int BTN_DISABLED_X = 86;
-    private static final int BTN_HOVER_X = 108;
-
-    // -- Check / Cancel icon GUI definitions --
-    private static final int ICON_CHECK_X = 45, ICON_CHECK_Y = 155, ICON_CHECK_W = 13, ICON_CHECK_H = 11;
-    private static final int ICON_CROSS_X = 69, ICON_CROSS_Y = 155, ICON_CROSS_W = 11, ICON_CROSS_H = 11;
-
-    // -- Button screen positions --
-    private static final int BTN_GAP = 8;
-    private static final int BUTTON_ROW_W = BTN_SIZE_W * 2 + BTN_GAP;
-    private static final int CONFIRM_BUTTON_X = (PANEL_TEX_W - BUTTON_ROW_W) / 2;
-    private static final int CANCEL_BUTTON_X = CONFIRM_BUTTON_X + BTN_SIZE_W + BTN_GAP;
-    private static final int CONFIRM_BUTTON_Y = 102;
-    private static final int CANCEL_BUTTON_Y = 102;
-
-    // -- Button pressing states --
-    private boolean pressingConfirm = false;
-    private boolean pressingCancel = false;
-
     // -- Scrollbar --
-    private static final int SCROLL_TRACK_X = 143;
+    private static final int SCROLL_TRACK_X = 145;
     private static final int SCROLL_TRACK_Y = 15;
     private static final int SCROLL_TRACK_H = 84;
     private static final int HANDLE_W = 12;
     private static final int HANDLE_H = 15;
-    private static final int HANDLE_ENABLED_X = 169;
-    private static final int HANDLE_DISABLED_X = 181;
+    private static final int HANDLE_ENABLED_X = 171;
+    private static final int HANDLE_DISABLED_X = 183;
     private static final int HANDLE_TEX_Y = 0;
     private static final int SCROLL_TRAVEL = SCROLL_TRACK_H - HANDLE_H;
 
@@ -88,6 +62,7 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
     private int startIndex = 0;
     private float scrollOffs = 0.0F;
     private boolean scrolling = false;
+    private boolean hasSelectedNewRecipe = false;
 
     public CarvingBladeScreen(CarvingBladeMenu menu, Inventory inv, Component title) {
         super(menu, inv, title);
@@ -121,7 +96,6 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
 
         this.renderRecipeSlots(guiGraphics, mouseX, mouseY, recipeAreaX, recipeAreaY, selectedRecipe);
         this.renderScrollbar(guiGraphics, x, y);
-        this.renderConfirmCancelButtons(guiGraphics, mouseX, mouseY, x, y);
     }
 
     private void renderRecipeSlots(GuiGraphics guiGraphics, int mouseX, int mouseY,
@@ -143,8 +117,8 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
             boolean isHovered = !isSelected && mouseX >= slotX && mouseX < slotX + SLOT_SIZE
                     && mouseY >= slotY && mouseY < slotY + SLOT_SIZE;
 
-            int bgY = isSelected ? SLOT_BG_SELECTED_Y : (isHovered ? SLOT_BG_HOVER_Y : SLOT_BG_NORMAL_Y);
-            guiGraphics.blit(GUI_TEXTURE, slotX, slotY, SLOT_BG_X, bgY, SLOT_SIZE, SLOT_SIZE);
+            int bgX = isSelected ? SLOT_BG_SELECTED_X : (isHovered ? SLOT_BG_HOVER_X : SLOT_BG_NORMAL_X);
+            guiGraphics.blit(GUI_TEXTURE, slotX, slotY, bgX, SLOT_BG_Y, SLOT_SIZE, SLOT_SIZE);
 
             assert this.minecraft != null;
             assert this.minecraft.level != null;
@@ -159,50 +133,6 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
         guiGraphics.pose().scale(CarvingBladeScreen.ITEM_SCALE, CarvingBladeScreen.ITEM_SCALE, 1.0F);
         guiGraphics.renderItem(stack, 0, 0);
         guiGraphics.pose().popPose();
-    }
-
-    private void renderConfirmCancelButtons(GuiGraphics guiGraphics, int mouseX, int mouseY, int x, int y) {
-        boolean hasSelection = this.menu.getSelectedRecipe() >= 0;
-
-        int confirmScreenX = x + CONFIRM_BUTTON_X;
-        int confirmScreenY = y + CONFIRM_BUTTON_Y;
-        int cancelScreenX = x + CANCEL_BUTTON_X;
-        int cancelScreenY = y + CANCEL_BUTTON_Y;
-
-        boolean confirmHover = hasSelection && isHovering(CONFIRM_BUTTON_X, CONFIRM_BUTTON_Y, BTN_SIZE_W, BTN_SIZE_H, mouseX, mouseY);
-        boolean cancelHover = isHovering(CANCEL_BUTTON_X, CANCEL_BUTTON_Y, BTN_SIZE_W, BTN_SIZE_H, mouseX, mouseY);
-
-        int confirmBgX;
-        if (!hasSelection) {
-            confirmBgX = BTN_DISABLED_X;
-        } else if (this.pressingConfirm && confirmHover) {
-            confirmBgX = BTN_PRESSED_X;
-        } else if (confirmHover) {
-            confirmBgX = BTN_HOVER_X;
-        } else {
-            confirmBgX = BTN_ENABLED_X;
-        }
-
-        int cancelBgX;
-        if (this.pressingCancel && cancelHover) {
-            cancelBgX = BTN_PRESSED_X;
-        } else if (cancelHover) {
-            cancelBgX = BTN_HOVER_X;
-        } else {
-            cancelBgX = BTN_ENABLED_X;
-        }
-
-        guiGraphics.blit(GUI_TEXTURE, confirmScreenX, confirmScreenY, confirmBgX, BTN_BG_Y, BTN_SIZE_W, BTN_SIZE_H);
-        guiGraphics.blit(GUI_TEXTURE, cancelScreenX, cancelScreenY, cancelBgX, BTN_BG_Y, BTN_SIZE_W, BTN_SIZE_H);
-
-        guiGraphics.blit(GUI_TEXTURE,
-                confirmScreenX + (BTN_SIZE_W - ICON_CHECK_W) / 2,
-                confirmScreenY + (BTN_SIZE_H - ICON_CHECK_H) / 2,
-                ICON_CHECK_X, ICON_CHECK_Y, ICON_CHECK_W, ICON_CHECK_H);
-        guiGraphics.blit(GUI_TEXTURE,
-                cancelScreenX + (BTN_SIZE_W - ICON_CROSS_W) / 2,
-                cancelScreenY + (BTN_SIZE_H - ICON_CROSS_H) / 2,
-                ICON_CROSS_X, ICON_CROSS_Y, ICON_CROSS_W, ICON_CROSS_H);
     }
 
     private void renderScrollbar(GuiGraphics guiGraphics, int x, int y) {
@@ -220,32 +150,18 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
     @Override
     public boolean mouseClicked(double mouseX, double mouseY, int button) {
         int x = (this.width - this.imageWidth) / 2;
-        int y = (this.height - this.imageHeight) / 2;
+        int selectedRecipe = getSelectedRecipe(mouseX, mouseY, x);
 
-        int recipeAreaX = x + RECIPE_AREA_X;
-        int recipeAreaY = y + RECIPE_AREA_Y;
-
-        for (int i = startIndex; i < Math.min(startIndex + VISIBLE, this.menu.getNumRecipes()); i++) {
-            int col = (i - startIndex) % COLUMNS;
-            int row = (i - startIndex) / COLUMNS;
-            int slotX = recipeAreaX + col * SLOT_SIZE;
-            int slotY = recipeAreaY + row * SLOT_SIZE;
-
-            if (mouseX >= slotX && mouseX <= slotX + SLOT_SIZE &&
-                    mouseY >= slotY && mouseY <= slotY + SLOT_SIZE) {
-                this.sendButtonClick(i);
+        if (selectedRecipe != -1) {
+            if (selectedRecipe == this.menu.getSelectedRecipe()) {
+                sendButtonClick(-1);
                 return true;
             }
-        }
 
-        boolean hasSelection = this.menu.getSelectedRecipe() >= 0;
-        if (hasSelection && isHovering(CONFIRM_BUTTON_X, CONFIRM_BUTTON_Y, BTN_SIZE_W, BTN_SIZE_H, mouseX, mouseY)) {
-            this.pressingConfirm = true;
-            return true;
-        }
 
-        if (isHovering(CANCEL_BUTTON_X, CANCEL_BUTTON_Y, BTN_SIZE_W, BTN_SIZE_H, mouseX, mouseY)) {
-            this.pressingCancel = true;
+            sendButtonClick(selectedRecipe);
+            this.menu.setSelectedRecipe(selectedRecipe);
+            this.hasSelectedNewRecipe = true;
             return true;
         }
 
@@ -264,25 +180,15 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
     public boolean mouseReleased(double mouseX, double mouseY, int button) {
         this.scrolling = false;
 
-        if (this.pressingConfirm) {
-            this.pressingConfirm = false;
-            if (this.menu.getSelectedRecipe() >= 0
-                    && isHovering(CONFIRM_BUTTON_X, CONFIRM_BUTTON_Y, BTN_SIZE_W, BTN_SIZE_H, mouseX, mouseY)) {
-                this.sendButtonClick(CarvingBladeMenu.CONFIRM_BUTTON_ID);
-                return true;
-            }
-        }
-
-        if (this.pressingCancel) {
-            this.pressingCancel = false;
-            if (isHovering(CANCEL_BUTTON_X, CANCEL_BUTTON_Y, BTN_SIZE_W, BTN_SIZE_H, mouseX, mouseY)) {
-                this.sendButtonClick(CarvingBladeMenu.CANCEL_BUTTON_ID);
-                return true;
-            }
+        if (this.menu.getSelectedRecipe() >= 0 && this.hasSelectedNewRecipe) {
+            this.sendButtonClick(CarvingBladeMenu.CARVE_CONFIRMATION_ID);
+            this.hasSelectedNewRecipe = false;
+            return true;
         }
 
         return super.mouseReleased(mouseX, mouseY, button);
     }
+
 
 
     @Override
@@ -321,11 +227,36 @@ public class CarvingBladeScreen extends AbstractContainerScreen<CarvingBladeMenu
         return (numRecipes + COLUMNS - 1) / COLUMNS - ROWS;
     }
 
+    private int getSelectedRecipe(double mouseX, double mouseY, int x) {
+        int y = (this.height - this.imageHeight) / 2;
+
+        int recipeAreaX = x + RECIPE_AREA_X;
+        int recipeAreaY = y + RECIPE_AREA_Y;
+        int selectedRecipe = -1;
+
+        for (int i = startIndex; i < Math.min(startIndex + VISIBLE, this.menu.getNumRecipes()); i++) {
+            int col = (i - startIndex) % COLUMNS;
+            int row = (i - startIndex) / COLUMNS;
+            int slotX = recipeAreaX + col * SLOT_SIZE;
+            int slotY = recipeAreaY + row * SLOT_SIZE;
+
+            if (mouseX >= slotX && mouseX <= slotX + SLOT_SIZE &&
+                    mouseY >= slotY && mouseY <= slotY + SLOT_SIZE) {
+                selectedRecipe = i;
+            }
+        }
+        return selectedRecipe;
+    }
+
     private void sendButtonClick(int id) {
         if (this.minecraft != null && this.minecraft.gameMode != null) {
-            this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, id);
-            this.minecraft.getSoundManager().play(
-                    SimpleSoundInstance.forUI(SoundEvents.UI_STONECUTTER_SELECT_RECIPE, 1.0F));
+            if (id >= 0) {
+                this.minecraft.gameMode.handleInventoryButtonClick(this.menu.containerId, id);
+            }
+            if (id < 0 || id == CarvingBladeMenu.CARVE_CONFIRMATION_ID) {
+                this.minecraft.getSoundManager().play(
+                        SimpleSoundInstance.forUI(SoundEvents.UI_STONECUTTER_SELECT_RECIPE, 1.0F));
+            }
         }
     }
 }
