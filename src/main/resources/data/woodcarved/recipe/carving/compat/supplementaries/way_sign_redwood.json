@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "supplementaries"
+    }
+  ],
   "type": "woodcarved:carving",
   "ingredient": {
     "item": "natures_spirit:redwood_sign"

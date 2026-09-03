@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "natures_spirit"
+    }
+  ],
   "type": "woodcarved:carving",
   "ingredient": {
     "item": "natures_spirit:olive_log"

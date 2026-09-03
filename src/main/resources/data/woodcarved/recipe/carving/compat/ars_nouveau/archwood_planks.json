@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "ars_nouveau"
+    }
+  ],
   "type": "woodcarved:carving",
   "ingredient": {
     "tag": "c:logs/archwood"

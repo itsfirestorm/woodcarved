@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "aether"
+    }
+  ],
   "type": "woodcarved:carving",
   "ingredient": {
     "tag": "aether:skyroot_logs"

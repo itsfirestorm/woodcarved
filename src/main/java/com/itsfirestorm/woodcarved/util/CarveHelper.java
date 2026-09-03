@@ -126,7 +126,12 @@ public class CarveHelper {
             newState = applyAttachFace(level, targetPos, newState, player, hitPos);
         } else if (newState.hasProperty(BlockStateProperties.HORIZONTAL_FACING)
                 && !oldState.hasProperty(BlockStateProperties.HORIZONTAL_FACING)) {
-            Direction facing = resolveHorizontalFacing(level, targetPos, newState, player, hitPos);
+            BlockState playerFacingState = newState.setValue(BlockStateProperties.HORIZONTAL_FACING, player.getDirection());
+
+            Direction facing = playerFacingState.canSurvive(level, targetPos)
+                ? player.getDirection()
+                : resolveHorizontalFacing(level, targetPos, newState, player, hitPos);
+
             newState = newState.setValue(BlockStateProperties.HORIZONTAL_FACING, facing);
 
             if (newState.hasProperty(BlockStateProperties.DOOR_HINGE))  {

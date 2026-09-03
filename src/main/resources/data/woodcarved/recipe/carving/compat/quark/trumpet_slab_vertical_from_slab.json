@@ -1,4 +1,10 @@
 {
+  "neoforge:conditions": [
+    {
+      "type": "neoforge:mod_loaded",
+      "modid": "quark"
+    }
+  ],
   "type": "woodcarved:carving",
   "ingredient": {
     "item": "quark:blossom_planks_slab"
