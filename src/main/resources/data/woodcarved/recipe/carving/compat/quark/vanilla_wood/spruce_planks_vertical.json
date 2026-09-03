@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "minecraft:spruce_logs"
+  },
+  "result": {
+    "id": "quark:vertical_spruce_planks",
+    "count": 4
+  }
+}

@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "minecraft:birch_logs"
+  },
+  "result": {
+    "id": "quark:vertical_birch_planks",
+    "count": 4
+  }
+}

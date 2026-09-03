@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "minecraft:acacia_logs"
+  },
+  "result": {
+    "id": "quark:vertical_acacia_planks",
+    "count": 4
+  }
+}

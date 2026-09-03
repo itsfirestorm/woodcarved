@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "minecraft:warped_stems"
+  },
+  "result": {
+    "id": "quark:vertical_warped_planks",
+    "count": 4
+  }
+}

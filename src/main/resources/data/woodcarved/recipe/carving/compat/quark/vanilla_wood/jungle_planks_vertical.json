@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "tag": "minecraft:jungle_logs"
+  },
+  "result": {
+    "id": "quark:vertical_jungle_planks",
+    "count": 4
+  }
+}
