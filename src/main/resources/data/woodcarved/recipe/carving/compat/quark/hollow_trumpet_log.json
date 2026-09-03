@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "quark:trumpet_log"
+  },
+  "result": {
+    "id": "quark:hollow_trumpet_log",
+    "count": 1
+  }
+}

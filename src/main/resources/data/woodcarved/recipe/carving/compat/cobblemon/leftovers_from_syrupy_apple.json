@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "cobblemon:syrupy_apple"
+  },
+  "result": {
+    "id": "cobblemon:leftovers",
+    "count": 1
+  }
+}

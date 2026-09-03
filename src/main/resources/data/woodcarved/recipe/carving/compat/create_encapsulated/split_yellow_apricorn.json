@@ -1,0 +1,10 @@
+{
+  "type": "woodcarved:carving",
+  "ingredient": {
+    "item": "cobblemon:yellow_apricorn"
+  },
+  "result": {
+    "id": "create_encapsulated:split_yellow_apricorn",
+    "count": 2
+  }
+}
