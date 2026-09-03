@@ -6,6 +6,7 @@ import com.itsfirestorm.woodcarved.woodcarved;
 import net.minecraft.world.item.BlockItem;
 import net.minecraft.world.item.Item;
 import net.minecraft.world.level.block.Block;
+import net.minecraft.world.level.block.SoundType;
 import net.minecraft.world.level.block.state.BlockBehaviour;
 import net.neoforged.bus.api.IEventBus;
 import net.neoforged.neoforge.registries.DeferredBlock;
@@ -34,5 +35,7 @@ public class ModBlocks {
 
     public static final DeferredBlock<Block> CARVING_TABLE = registerBlock("carving_table",
             () -> new CarvingTable(BlockBehaviour.Properties.of()
+                    .sound(SoundType.WOOD)
+                    .destroyTime(3.0F)
                     .noOcclusion()));
 }

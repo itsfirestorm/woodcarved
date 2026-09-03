@@ -205,6 +205,7 @@ public class CarveHelper {
 
         if (leftSturdy && !rightSturdy) return leftDir;
         if (rightSturdy && !leftSturdy) return rightDir;
+        if (!leftSturdy) return null;
 
         Vec3 refPoint = hitPos != null ? hitPos : player.position();
         double offsetX = refPoint.x - (pos.getX() + 0.5D);
